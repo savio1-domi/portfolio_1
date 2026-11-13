@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Dominic Juma, a Computer Science diploma student at Zetech who is interested in web development and database management.">
+    <title>Dominic Juma | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hidden controls: colour palette, light/dark mode and mobile menu. All pure CSS, no JavaScript. -->
+    <input type="radio" name="pal" id="p-ember" class="state" checked aria-label="Ember palette">
+    <input type="radio" name="pal" id="p-lagoon" class="state" aria-label="Lagoon palette">
+    <input type="radio" name="pal" id="p-orchid" class="state" aria-label="Orchid palette">
+    <input type="radio" name="pal" id="p-meadow" class="state" aria-label="Meadow palette">
+    <input type="checkbox" id="mode" class="state" aria-label="Light mode">
+    <input type="checkbox" id="menu" class="state" aria-label="Open menu">
+
+    <div class="progress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <!-- ===== FLOATING NAV ===== -->
+    <header class="nav" id="top">
+        <a href="#Home" class="logo" aria-label="Dominic Juma, home"><i></i>Dominic<em>.</em></a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#Home" class="nav-link">Home</a></li>
+                <li><a href="#About" class="nav-link">About</a></li>
+                <li><a href="#Skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#Contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="tools">
+            <div class="swatches" role="group" aria-label="Colour palette">
+                <label for="p-ember" class="sw sw-ember" title="Ember"></label>
+                <label for="p-lagoon" class="sw sw-lagoon" title="Lagoon"></label>
+                <label for="p-orchid" class="sw sw-orchid" title="Orchid"></label>
+                <label for="p-meadow" class="sw sw-meadow" title="Meadow"></label>
+            </div>
+            <label for="mode" class="mode-btn" title="Light / dark mode">
+                <span class="m-moon">🌙</span><span class="m-sun">☀️</span>
+            </label>
+            <label for="menu" class="menu-btn" title="Menu"><span></span><span></span><span></span></label>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HOME ===== -->
+        <section id="Home" class="home">
+            <div class="home-text">
+                <p class="eyebrow"><span class="pulse"></span> Open to internships</p>
+
+                <h1>
+                    Hi, I'm
+                    <span class="name"><em>Nasei</em> Mercy</span>
+                </h1>
+
+                <p class="lead">
+                    Student at zetech passionate about web development and technology, and I'm looking for an
+                    internship where I can grow and build real solutions.
+                </p>
+
+                <div class="cta-row">
+                    <a href="#Contact" class="btn btn-primary"><span>Contact me</span><i>→</i></a>
+                    <a href="#projects" class="btn btn-ghost"><span>View my work</span><i>↓</i></a>
+                </div>
+
+                <ul class="stats">
+                    <li><b class="count" style="--to:6">6</b><span>Skills</span></li>
+                    <li><b class="count" style="--to:4">4</b><span>Projects</span></li>
+                    <li><b class="count" style="--to:1">1</b><span>Goal: internship</span></li>
+                </ul>
+            </div>
+
+            <!-- Photo with orbiting skills. Hover to pause the orbit. -->
+            <div class="orbit">
+                <div class="ring" aria-hidden="true"></div>
+
+                <div class="blob">
+                    <div class="photo" role="img" aria-label="Profile picture of Dominic Juma">
+                        <!-- Initials show behind the photo until profile.jpeg is added -->
+                        <div class="avatar-fallback" aria-hidden="true">DJ</div>
+                        <img src="Dom.jpeg" alt="Portrait of Dominic Juma in a white shirt" width="400" height="400" class="profile-img" fetchpriority="high">
+                    </div>
+                </div>
+
+                <div class="orbiter" style="--i:0"><span class="chip">HTML</span></div>
+                <div class="orbiter" style="--i:1"><span class="chip">CSS</span></div>
+                <div class="orbiter" style="--i:2"><span class="chip">Python</span></div>
+                <div class="orbiter" style="--i:3"><span class="chip">SQL</span></div>
+            </div>
+
+            <a href="#About" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="About">
+            <header class="section-head reveal">
+                <p class="eyebrow">01 / About</p>
+                <h2>A little about <em>me</em></h2>
+            </header>
+
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <p class="big">
+                        I'm <strong>Dominic Juma</strong>, a dedicated computer science student with an
+                        interest in programming, web development and database management.
+                    </p>
+                    <p>
+                        I enjoy learning new technologies and developing solutions to real-world
+                        problems. I am looking for an internship opportunity where I can improve my
+                        technical skills and gain practical experience.
+                    </p>
+
+                    <div class="accordion">
+                        <details name="facts" open>
+                            <summary>Course</summary>
+                            <p>Diploma in Computer Science</p>
+                        </details>
+                        <details name="facts">
+                            <summary>Institution</summary>
+                            <p>Zetech</p>
+                        </details>
+                        <details name="facts">
+                            <summary>Interests</summary>
+                            <p>Programming, web development and database management.</p>
+                        </details>
+                        <details name="facts">
+                            <summary>Looking for</summary>
+                            <p>An internship opportunity to build practical experience.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <ol class="timeline reveal-right">
+                    <li>
+                        <span class="when">Now</span>
+                        <h3>Diploma in Computer Science</h3>
+                        <p>Studying at Zetech and building skills in programming, web development and databases.</p>
+                    </li>
+                    <li>
+                        <span class="when">Next</span>
+                        <h3>An internship</h3>
+                        <p>Improving my technical skills and gaining practical experience.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Photo gallery -->
+            <div class="gallery reveal">
+                <figure class="shot shot-tall">
+                    <img src="Dominic.jpeg" alt="Dominic Juma in a white shirt against a blue backdrop" width="1344" height="1792" loading="lazy">
+                    <figcaption>Graduation 2023</figcaption>
+                </figure>
+                <figure class="shot shot-tall">
+                    <img src="Dom.jpeg" alt="Dominic Juma, black and white portrait" width="1376" height="1824" loading="lazy">
+                    <figcaption>Music studio</figcaption>
+                </figure>
+                <figure class="shot shot-wide">
+                    <img src="Domini.png" alt="Dominic Juma working on his laptop" width="400" height="400" loading="lazy">
+                    <figcaption>Hacktoberfest</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="Skills">
+            <input type="radio" name="filter" id="f-all" class="state" checked aria-label="Show all skills">
+            <input type="radio" name="filter" id="f-web" class="state" aria-label="Show web skills">
+            <input type="radio" name="filter" id="f-data" class="state" aria-label="Show data and code skills">
+            <input type="radio" name="filter" id="f-office" class="state" aria-label="Show office skills">
+
+            <header class="section-head reveal">
+                <p class="eyebrow">02 / Skills</p>
+                <h2>My technical <em>skills</em></h2>
+                <p class="hint">Filter by area, then hover or tap a card to flip it.</p>
+            </header>
+
+            <div class="filters reveal" role="group" aria-label="Filter skills">
+                <label for="f-all">All</label>
+                <label for="f-web">Web</label>
+                <label for="f-data">Data &amp; Code</label>
+                <label for="f-office">Office</label>
+            </div>
+
+            <div class="skills-grid">
+                <article class="card" data-cat="web" tabindex="0">
+                    <div class="inner">
+                        <div class="face front"><span class="ic">🌐</span><h3>HTML</h3></div>
+                        <div class="face back"><p>Structuring web pages</p></div>
+                    </div>
+                </article>
+                <article class="card" data-cat="web" tabindex="0">
+                    <div class="inner">
+                        <div class="face front"><span class="ic">🎨</span><h3>CSS</h3></div>
+                        <div class="face back"><p>Styling &amp; responsive design</p></div>
+                    </div>
+                </article>
+                <article class="card" data-cat="data" tabindex="0">
+                    <div class="inner">
+                        <div class="face front"><span class="ic">🐍</span><h3>Python</h3></div>
+                        <div class="face back"><p>Programming &amp; scripting</p></div>
+                    </div>
+                </article>
+                <article class="card" data-cat="data" tabindex="0">
+                    <div class="inner">
+                        <div class="face front"><span class="ic">📊</span><h3>Data Science</h3></div>
+                        <div class="face back"><p>Working with data</p></div>
+                    </div>
+                </article>
+                <article class="card" data-cat="data" tabindex="0">
+                    <div class="inner">
+                        <div class="face front"><span class="ic">🗄️</span><h3>Database Management</h3></div>
+                        <div class="face back"><p>Designing &amp; querying data</p></div>
+                    </div>
+                </article>
+                <article class="card" data-cat="office" tabindex="0">
+                    <div class="inner">
+                        <div class="face front"><span class="ic">💼</span><h3>Microsoft Office</h3></div>
+                        <div class="face back"><p>Documents &amp; spreadsheets</p></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects">
+            <header class="section-head reveal">
+                <p class="eyebrow">03 / Projects</p>
+                <h2>Things I've <em>built</em></h2>
+            </header>
+
+            <article class="project reveal">
+                <div class="project-body">
+                    <span class="tag">Featured project</span>
+                    <h3>Student Management System</h3>
+                    <p>
+                        A system designed to manage student information, including registration,
+                        records and academic details.
+                    </p>
+                    <ul class="pills">
+                        <li>Registration</li>
+                        <li>Records</li>
+                        <li>Academic details</li>
+                    </ul>
+                    <ul class="tech-list" aria-label="Technologies">
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <!-- Decorative illustration, not a real screenshot -->
+                <div class="mock" aria-hidden="true">
+                    <div class="mock-bar"><i></i><i></i><i></i></div>
+                    <div class="mock-row head"><b></b><b></b><b></b></div>
+                    <div class="mock-row"><b></b><b></b><b></b></div>
+                    <div class="mock-row"><b></b><b></b><b></b></div>
+                    <div class="mock-row"><b></b><b></b><b></b></div>
+                    <div class="mock-row"><b></b><b></b><b></b></div>
+                </div>
+            </article>
+
+            <div class="builds">
+                <article class="build reveal">
+                    <span class="num" aria-hidden="true">01</span>
+                    <h3>E-Commerce Platform</h3>
+                    <p>An online shopping platform.</p>
+                    <ul class="tech-list"><li>Web design</li><li>Development</li></ul>
+                </article>
+                <article class="build reveal">
+                    <span class="num" aria-hidden="true">02</span>
+                    <h3>Task Management App</h3>
+                    <p>An app for organising and tracking tasks.</p>
+                    <ul class="tech-list"><li>Web development</li></ul>
+                </article>
+                <article class="build reveal">
+                    <span class="num" aria-hidden="true">03</span>
+                    <h3>Fitness Tracker</h3>
+                    <p>A mobile app for tracking fitness.</p>
+                    <ul class="tech-list"><li>Mobile app</li></ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="Contact">
+            <header class="section-head reveal">
+                <p class="eyebrow">04 / Contact</p>
+                <h2>Let's <em>talk</em></h2>
+            </header>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <p class="big">
+                        Have an internship opportunity or a project in mind? Send me a message and
+                        I'll get back to you.
+                    </p>
+                    <a class="contact-link" href="mailto:techsavvydominic3@gmail.com">
+                        <span class="ci">✉️</span>
+                        <span><small>Email</small>techsavvydominic3@gmail.com</span>
+                        <i>↗</i>
+                    </a>
+                    <a class="contact-link" href="tel:+254729201192">
+                        <span class="ci">📞</span>
+                        <span><small>Phone</small>0729 201 192</span>
+                        <i>↗</i>
+                    </a>
+                    <div class="contact-link contact-static">
+                        <span class="ci">📍</span>
+                        <span><small>Location</small>Nairobi, Kenya</span>
+                    </div>
+
+                    <ul class="socials" aria-label="Social media">
+                        <li><a href="https://github.com/savio1-domi" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/dominic-juma-018305279/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/saviodomiju" target="_blank" rel="noopener">X / Twitter</a></li>
+                        <li><a href="https://www.instagram.com/savio.domi.de.great/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://web.facebook.com/profile.php?id=100094394285093" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a href="https://wa.me/254729201192" target="_blank" rel="noopener">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opens the visitor's email app with the message filled in -->
+                <form class="reveal-right" action="mailto:techsavvydominic3@gmail.com" method="post" enctype="text/plain">
+                    <fieldset class="reasons">
+                        <legend>I'm writing about</legend>
+                        <label><input type="radio" name="Reason" value="Internship" checked><span>Internship</span></label>
+                        <label><input type="radio" name="Reason" value="A project"><span>A project</span></label>
+                        <label><input type="radio" name="Reason" value="Just saying hi"><span>Just saying hi</span></label>
+                    </fieldset>
+
+                    <div class="field">
+                        <input type="text" id="name" name="Name" placeholder=" " required>
+                        <label for="name">Your name</label>
+                    </div>
+                    <div class="field">
+                        <input type="email" id="email" name="Email" placeholder=" " required>
+                        <label for="email">Your email</label>
+                    </div>
+                    <div class="field">
+                        <textarea id="message" name="Message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Your message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-shine"><span>Send message</span><i>→</i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p class="giant" aria-hidden="true" style="font-size:clamp(2.6rem,13vw,11rem)">Nasei Mercy</p>
+        <ul class="socials socials-foot" aria-label="Social media">
+            <li><a href="https://github.com/naseicodes" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/dominic-juma-018305279/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://x.com/saviodomiju" target="_blank" rel="noopener">X</a></li>
+            <li><a href="https://www.instagram.com/savio.domi.de.great/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+        <div class="foot-row">
+            <p>&copy; 2026 Dominic Juma. All Rights Reserved.</p>
+            <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+        </div>
+    </footer>
+</body>
+</html>
